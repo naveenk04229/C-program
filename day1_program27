@@ -1,0 +1,20 @@
+Swap Values 2:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int a;
+    int b;
+    scanf("%d%d",&a,&b);
+    printf("The First value before Swapping:%d\n",a);
+    printf("The Second value before Swapping:%d\n",b);
+     printf("The First value after Swapping:%d\n",b);
+    printf("The Second value after Swapping:%d\n",a);
+    
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
