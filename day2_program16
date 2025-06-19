@@ -1,0 +1,38 @@
+Friendly pair:
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+
+int sum_of_divisors(int n) {
+    int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0)
+            sum += i;
+    }
+    return sum;
+}
+
+int main() {
+    int num1, num2;
+    scanf("%d", &num1);
+    scanf("%d", &num2);
+
+    int sum1 = sum_of_divisors(num1);
+    int sum2 = sum_of_divisors(num2);
+
+    // To compare ratios safely without floating point errors, cross-multiply
+    if (sum1 * num2 == sum2 * num1)
+        printf("Friendly Pair\n");
+    else
+        printf("Not Friendly Pair\n");
+
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
