@@ -1,0 +1,41 @@
+Wall Painting:
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+
+int main() {
+    int wallL, wallB;
+    int p1L, p1B;
+    int p2L, p2B;
+    scanf("%d %d", &wallL, &wallB);
+    scanf("%d %d", &p1L, &p1B);
+    scanf("%d %d", &p2L, &p2B);
+
+    int canFit = 0;
+
+    if ((p1L + p2L <= wallL && p1B <= wallB && p2B <= wallB) ||
+        (p1L + p2B <= wallL && p1B <= wallB && p2L <= wallB) ||
+        (p1B + p2L <= wallL && p1L <= wallB && p2B <= wallB) ||
+        (p1B + p2B <= wallL && p1L <= wallB && p2L <= wallB) ||
+        (p1B + p2B <= wallB && p1L <= wallL && p2L <= wallL) ||
+        (p1B + p2L <= wallB && p1L <= wallL && p2B <= wallL) ||
+        (p1L + p2L <= wallB && p1B <= wallL && p2B <= wallL) ||
+        (p1L + p2B <= wallB && p1B <= wallL && p2L <= wallL)) 
+    
+    {
+        canFit = 1;
+    }
+
+    if (canFit)
+        printf("Raj can fix both painting\n");
+    else
+        printf("Raj cannot fix both painting\n");
+
+    return 0;
+}
