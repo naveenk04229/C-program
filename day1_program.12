@@ -1,0 +1,25 @@
+Volume of the shape:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    int l;
+    int b;
+    int h;
+    int r;
+    
+    scanf("%d%d%d%d",&l,&b,&h,&r);
+     float c=l*b*h;
+     float d=3.141*r*r*h;
+     float e=3.141*r*r*h/3;
+     float f=(4.0/3.0)*3.1415*r*r*r;
+     printf("Volume of Cubiod=%.2f\n",c);
+     printf("Volume of Cylinder=%.2f\n",d);
+     printf("Volume of Cone=%.2f\n",e);
+     printf("Volume of Shpere=%.2f\n",f);
+
+    return 0;
+}
