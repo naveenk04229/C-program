@@ -1,0 +1,26 @@
+The newspaper agency:
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    
+    int w,x,y;
+    int a;
+    int b;
+    int c;
+    scanf("%d%d%d",&w,&x,&y);
+    a=(w*x);
+    b=(y*w);
+    c=a-b-100;
+    printf("%d",c);
+    
+    
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    return 0;
+}
