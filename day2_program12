@@ -1,0 +1,24 @@
+Gardening
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+
+    int rows, cols, treeNum;
+    scanf("%d", &rows);
+    scanf("%d", &cols);
+    scanf("%d", &treeNum);
+    int col_of_tree = (treeNum - 1) / rows + 1;
+    if (col_of_tree == 2 || col_of_tree == cols - 1) {
+        printf("It is a mango tree\n");
+    } else {
+        printf("It is not a mango tree\n");
+    }
+    return 0;
+}
