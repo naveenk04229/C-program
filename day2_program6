@@ -1,0 +1,32 @@
+Greatest of Three Numbers:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+
+
+int main() {
+    int a, b, c;
+    int max;
+    int maxIndex;
+    
+    scanf("%d %d %d", &a, &b, &c);
+
+  
+    if (a== b && a== b) {
+        max = a;
+        maxIndex = 3;
+    } else if (b==a && b== c) {
+        max = b;
+        maxIndex = 3;
+    } else {
+        max = c;
+        maxIndex = 3;
+    }
+
+    printf("Number%d is maximum with value of %.1f\n", maxIndex, (float)max);
+
+    return 0;
+}
