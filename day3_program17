@@ -1,0 +1,31 @@
+Sparse Matrix:
+
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int n;
+    scanf("%d", &n);
+
+    int matrix[n][n];
+    int zeroCount = 0, totalElements = n * n;
+
+    for(int i = 0; i < n; i++) {
+        for(int j = 0; j < n; j++) {
+            scanf("%d", &matrix[i][j]);
+            if(matrix[i][j] == 0) {
+                zeroCount++;
+            }
+        }
+    }
+
+    if(zeroCount > totalElements / 2) {
+        printf("Matrix is a Sparse Matrix\n");
+    } else {
+        printf("Matrix is not a Sparse Matrix\n");
+    }
+
+    return 0;
+}
