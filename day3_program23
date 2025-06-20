@@ -1,0 +1,33 @@
+Queue:
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main() {
+    
+    int n, m;
+    scanf("%d %d", &n, &m);
+
+    int a[100];
+    for (int i = 0; i < n; i++)
+        scanf("%d", &a[i]);
+
+    int buses = 1, current = 0;
+
+    for (int i = 0; i < n; i++) {
+        if (current + a[i] <= m) {
+            current += a[i];
+        } else {
+            buses++;
+            current = a[i];
+        }
+    }
+
+    printf("%d\n", buses);
+    return 0;
+}
