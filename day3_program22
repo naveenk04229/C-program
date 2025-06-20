@@ -1,0 +1,54 @@
+Minimum scalar product:
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+
+    
+    void sortAscending(int a[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = i+1; j < n; j++)
+            if (a[i] > a[j]) {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+}
+
+void sortDescending(int a[], int n) {
+    for (int i = 0; i < n-1; i++)
+        for (int j = i+1; j < n; j++)
+            if (a[i] < a[j]) {
+                int temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    
+    int v1[800], v2[800];
+
+    for (int i = 0; i < n; i++)
+        scanf("%d", &v1[i]);
+
+    for (int i = 0; i < n; i++)
+        scanf("%d", &v2[i]);
+
+    sortAscending(v1, n);
+    sortDescending(v2, n);
+
+    long long result = 0;
+    for (int i = 0; i < n; i++)
+        result += (long long)v1[i] * v2[i];
+
+    printf("%lld\n", result);
+    return 0;
+}
